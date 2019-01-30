@@ -12,7 +12,7 @@ body {
   color: var(--mainDark) !important;
 }
 .text-title {
-  font-family: Poppins, 'Times New Roman', Times, serif;
+  font-family: 'Playfair Display', 'Times New Roman', Times, serif;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
 }
