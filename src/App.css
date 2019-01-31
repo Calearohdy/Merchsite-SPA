@@ -12,8 +12,8 @@ body {
   color: var(--mainDark) !important;
 }
 .text-title {
-  font-family: 'Playfair Display', 'Times New Roman', Times, serif;
-  letter-spacing: 0.3rem;
+  font-family: 'Playfair Display';
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
 }
 
