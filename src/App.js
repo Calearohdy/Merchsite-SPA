@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import {Switch,Route} from 'react-router-dom';
-import NavBar from '../src/components/NavBar';
-import ProductList from '../src/components/ProductList';
-import Details from '../src/components/Details';
+import NavBar from '../src/components/Nav/NavBar';
+import ProductList from '../src/components/Products/ProductList';
+import Details from '../src/components/Products/Details';
 import Cart from '../src/components/Cart/Cart';
-import Default from '../src/components/Default';
-import Modal from './components/Modal';
+import Default from '../src/components/Error/Default';
+import Modal from './components/Modals/Modal';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 class App extends Component {
