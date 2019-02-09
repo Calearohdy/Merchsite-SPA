@@ -10,11 +10,9 @@ export default class PayPalButton extends Component {
     }
 
     const onCancel = data => {
-
     }
 
     const onError = err => {
-
     }
 
     let env = "sandbox";

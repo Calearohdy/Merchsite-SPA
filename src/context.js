@@ -18,6 +18,14 @@ class ProductProvider extends Component {
     }
     componentDidMount(){
         this.setProducts();
+        // fetch(`${process.env.REACT_APP_API}/api/data`)
+        // .then(res => res.json())
+        // .then(result => {
+        //     console.log(result.products)
+        //   this.setState(() => {
+        //       return {products: [...result.products]}
+        //   })
+        // })
     }
 
     setProducts = () => {
