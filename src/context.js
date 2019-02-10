@@ -17,15 +17,15 @@ class ProductProvider extends Component {
         cartTotal: 0
     }
     componentDidMount(){
-        // this.setProducts();
-        fetch(`${process.env.REACT_APP_API}/api/data`)
-        .then(res => res.json())
-        .then(result => {
-            console.log(result.products)
-          this.setState(() => {
-              return {products: [...result.products]}
-          })
-        })
+        this.setProducts();
+        // fetch(`${process.env.REACT_APP_API}/api/data`)
+        // .then(res => res.json())
+        // .then(result => {
+        //     console.log(result.products)
+        //   this.setState(() => {
+        //       return {products: [...result.products]}
+        //   })
+        // })
     }
 
     setProducts = () => {
