@@ -1,61 +1,59 @@
 import React, { Component } from 'react'
 import './NavBar.css';
-import {Link} from 'react-router-dom';
-import styled from 'styled-components';
-import {ButtonContainer} from '../Util/Button';
+import { Icon, Menu } from 'semantic-ui-react'
 export default class NavBar extends Component {
 
   // buttonTest = () => {
-  //   fetch(`${process.env.REACT_APP_API}/api/data`)
-  //   .then(res => res.json())
-  //   .then(result => {
-  //     console.log({...result.products})
-  //   })
+//  console.log(this.props)
   // }
 
+  // TODO - fix LINK from react-router-dom
+
+  state = { activeItem: 'CR Merch' }
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
   render() {
+    const { activeItem } = this.state
+
     return (
-      <NavWrapper className={"navbar navbar-expand-sm navbar-dark sticky-top px-sm-5"}>
-        <Link to='/'>
-        <div style={{color:'white',fontSize: '30px', float:'left',fontFamily: 'Playfair Display'}}>My Merch</div>
-        </Link>
-        <ul className="navbar-nav align-items-center">
-          <li className="nav-item ml-5">
-            <Link to="/" className="nav-link" style={{fontFamily: 'Playfair Display'}} >
-              Products
-            </Link>
-          </li>
-          {/* <li className="nav-item ml-5 btn btn-dark">
-            <button onClick={() => this.buttonTest()} >
-              API
-            </button>
-          </li> */}
-          <li className="nav-item ml-5">
-            <Link to="/blog" className="nav-link" style={{fontFamily: 'Playfair Display'}}>
-              Blog
-            </Link>
-          </li>
-        </ul>
-        <Link to="/cart" className="ml-auto">
-          <ButtonContainer>
-            <span className="pr-2">
-            <i className="fas fa-cart-plus"/>
-            </span>
-            My Cart
-          </ButtonContainer>
-        </Link>
-      </NavWrapper>
+      <div>
+      <Menu pointing secondary size="huge" stackable>
+          <Menu.Item 
+            active={activeItem === 'CR Merch'} 
+            onClick={this.handleItemClick}
+            href="/"
+            >
+            <div style={{fontFamily: 'Rock Salt', marginRight: '3px', fontSize: '20px'}} >
+              CR
+            </div>
+            <div style={{fontFamily: 'Pacifico', fontSize: '25px'}} >
+              Merch
+            </div>
+          </Menu.Item>
+          <Menu.Item
+            name='blog'
+            active={activeItem === 'blog'}
+            href="/blog"
+          />
+          <Menu.Item
+            name='products'
+            active={activeItem === 'products'}
+            href="/products"
+          />
+          <Menu.Menu className='right'>
+          <Menu.Item
+              name='Cart'
+              active={activeItem === 'Cart'}
+              href="/cart"
+            >
+            <Icon name='shopping cart' />
+            Cart
+          </Menu.Item>
+          </Menu.Menu>
+        </Menu>
+      </div>
     )
   }
 }
 
-const NavWrapper = styled.nav`
-background: #136a8a;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #267871, #136a8a);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #267871, #136a8a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-.nav-link {
-  color: var(--mainWhite) !important;
-  font-size: 1.3rem;
-  text-transform: capitalize;
-}
-`

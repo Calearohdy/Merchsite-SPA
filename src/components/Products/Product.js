@@ -83,9 +83,9 @@ const ProductWrapper = styled.div`
   bottom: 0;
   right: 0;
   padding: 0.7rem 0.9rem
-  background: #00bf8f;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #001510, #00bf8f);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #001510, #00bf8f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #00B4DB;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
   border: none;
   color: var(--mainWhite);
   border-radius: 0.5rem 0 0 0;
@@ -96,7 +96,10 @@ const ProductWrapper = styled.div`
   transform: translate(0,0)
 }
 .cart-btn:hover {
-  color: var(--mainBlue);
+  color: white;
+  background: #00B4DB;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   cursor: pointer;
 }
 `

@@ -5,7 +5,9 @@ import ProductList from '../src/components/Products/ProductList';
 import Details from '../src/components/Products/Details';
 import Cart from '../src/components/Cart/Cart';
 import Default from '../src/components/Error/Default';
+import Main from '../src/components/Main/Main';
 import Modal from './components/Modals/Modal';
+import ComingSoon from '../src/components/Error/ComingSoon';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 class App extends Component {
@@ -14,16 +16,22 @@ class App extends Component {
       <React.Fragment>
         <NavBar />
         <Switch>
-          <Route 
+        <Route 
               exact path="/" 
+              component={Main}/>
+          <Route 
+              path="/products" 
               component={ProductList}/>
-              <Route 
+          <Route 
               path="/details" 
               component={Details}/>
-              <Route 
+          <Route 
               path="/cart" 
               component={Cart}/>
               <Route 
+              path="/blog" 
+              component={ComingSoon}/>              
+          <Route 
               component={Default}/>                                          
         </Switch>
         <Modal />

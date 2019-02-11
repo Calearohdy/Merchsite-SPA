@@ -1,5 +1,6 @@
 import React from 'react'
 import CartItem from './CartItem'
+import { Segment } from 'semantic-ui-react'
 
 export default function CartList({value}) {
     const {cart} = value;
@@ -7,7 +8,7 @@ export default function CartList({value}) {
     return (
         <div className="container-fluid">
             {cart.map(item => {
-                return <CartItem key={item.id} item={item} value={value}/>
+                return <Segment><CartItem key={item.id} item={item} value={value}/></Segment>
             })}
         </div>
     )

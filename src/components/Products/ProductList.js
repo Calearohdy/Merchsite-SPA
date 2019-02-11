@@ -5,9 +5,11 @@ import Footer from '../Util/Footer';
 import Title from '../Util/Title'
 import {ProductConsumer} from '../../context';
 export default class ProductList extends Component {
+  state = { activeItem: 'home' }
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   render() {
-    
     return (
       <React.Fragment>
         <Banner />
@@ -25,7 +27,7 @@ export default class ProductList extends Component {
             </div>
           </div>
         </div>
-        <Footer />
+        <Footer top="/products" />
       </React.Fragment>
     )
   }
