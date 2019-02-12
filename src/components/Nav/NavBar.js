@@ -1,26 +1,26 @@
 import React, { Component } from 'react'
 import './NavBar.css';
+import {Link} from 'react-router-dom';
 import { Icon, Menu } from 'semantic-ui-react'
 export default class NavBar extends Component {
 
-  // buttonTest = () => {
-//  console.log(this.props)
-  // }
+  // TODO: fix issue with OnClick Navbar function - should show 
+  // pointers to the specific item 
 
-  // TODO - fix LINK from react-router-dom
 
-  state = { activeItem: 'CR Merch' }
+  state = { activeItem: 'home' }
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+  handleItemClick = (e) => {
+    // console.log(e.view)
+  }
 
   render() {
     const { activeItem } = this.state
-
     return (
       <div>
-      <Menu pointing secondary size="huge" stackable>
+      <Menu pointing size="huge" stackable>
           <Menu.Item 
-            active={activeItem === 'CR Merch'} 
+            active={activeItem === 'home'} 
             onClick={this.handleItemClick}
             href="/"
             >
@@ -31,24 +31,26 @@ export default class NavBar extends Component {
               Merch
             </div>
           </Menu.Item>
-          <Menu.Item
-            name='blog'
-            active={activeItem === 'blog'}
-            href="/blog"
-          />
-          <Menu.Item
-            name='products'
-            active={activeItem === 'products'}
-            href="/products"
-          />
+          <Menu.Item active={activeItem === 'blog'} name='blog' >
+            <Link to="/blog" className="link">
+            <div onClick={(e) => this.handleItemClick(e)} name="blog" >
+              Blog
+              </div> 
+            </Link>
+          </Menu.Item>
+          <Menu.Item active={activeItem === 'products'}>
+            <Link to="/products" className="link">
+            <div onClick={(e) => this.handleItemClick(e)} >
+            Products
+            </div>
+            </Link>
+          </Menu.Item>
           <Menu.Menu className='right'>
-          <Menu.Item
-              name='Cart'
-              active={activeItem === 'Cart'}
-              href="/cart"
-            >
+          <Menu.Item active={activeItem === 'cart'}>
+          <Link to="/cart" className="cart">
             <Icon name='shopping cart' />
             Cart
+            </Link>
           </Menu.Item>
           </Menu.Menu>
         </Menu>

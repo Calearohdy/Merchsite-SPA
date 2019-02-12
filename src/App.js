@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <NavBar />
+        <NavBar store={this.props.store} />
         <Switch>
         <Route 
               exact path="/" 

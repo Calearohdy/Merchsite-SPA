@@ -63,7 +63,7 @@ export default class Main extends Component {
                     I created my first web project using html, css, javascript, php and mysql way back 2015. 
                     And since then, I was amazed of how great it is when it comes to working with code and solving logical/Business problems. 
                     It made me realize that programming is so wide and there's a lot to learn to become an expert to it. 
-                    But even though it's hard, learning is great and it's what I do everyday.</h5>
+                    But even though it's hard, learning is great and it's what I do <u>everyday</u>.</h5>
                     <div className="row">
         						<div className="col-md-4">
         							<div className="wel_item">

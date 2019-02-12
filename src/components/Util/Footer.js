@@ -1,11 +1,14 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 
-export default function Footer(props) {
+export default function Footer({top}) {
   return (
     <footer className="text-muted mt-2">
         <div className="container">
             <p className="float-right">
-                <a href={props.top} className="href">Back to Top</a>
+                <Link to={`${top}`}>
+                    Back to Top
+                </Link>
             </p>
             <p>
              © CRMerch, LLC
