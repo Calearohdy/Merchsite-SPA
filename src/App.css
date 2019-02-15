@@ -45,13 +45,18 @@ body {
 
 .mainBackground {
   background: #005C97;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  background: -webkit-linear-gradient(to left, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #313386, rgb(0, 106, 172)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
   padding: 150px
 }
 
 .popOut {
-  color: #00B4DB;
+  font-family: 'Pacifico', cursive;
+  background: #005C97;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .bannerProps {
@@ -68,6 +73,6 @@ body {
 }
 
 .bannerCard {
-  box-shadow: -1px 8px 11px -1px rgba(0,0,0,0.13) !important;    
+  box-shadow: -1px 8px 20px 3px rgba(0, 0, 0, 0.13) !important;    
   bottom: 3px !important;
 }

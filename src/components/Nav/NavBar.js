@@ -26,7 +26,7 @@ export default class NavBar extends Component {
             <div style={{fontFamily: 'Rock Salt', marginRight: '3px', fontSize: '20px'}} >
               CR
             </div>
-            <div style={{fontFamily: 'Pacifico', fontSize: '25px'}} >
+            <div className="navPop" >
               Merch
             </div>
           </Menu.Item>
