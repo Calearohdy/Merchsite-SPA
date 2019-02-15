@@ -5,7 +5,7 @@ export default class LinkedInTracker extends Component {
     // ** TODO - integrate API to update
   render() {
     return (
-    <Card raised>
+    <Card className="card">
         <Card.Content>
         <Card.Header>
             <i className="fab fa-linkedin" ></i> LinkedIn Activity

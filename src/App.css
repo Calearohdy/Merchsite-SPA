@@ -44,12 +44,25 @@ body {
 }
 
 .mainBackground {
-  background: #00B4DB;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  padding: 55px
+  background: #005C97;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  padding: 205px
 }
 
 .popOut {
   color: #00B4DB;
+}
+
+.bannerProps {
+  padding: 200px !important;
+}
+
+.card {
+  bottom: 0px;
+  transition: all 0.2s ease-in-out !important;
+}
+.card:hover, .card:active {
+  box-shadow: -1px 8px 11px -1px rgba(0,0,0,0.13);    
+  bottom: 3px !important;
 }

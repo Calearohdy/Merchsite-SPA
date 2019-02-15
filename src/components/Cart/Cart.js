@@ -8,7 +8,7 @@ import CartTotals from './CartTotals'
 export default class Cart extends Component {
   render() {
     return (
-      <section>
+      <section style={{paddingTop: '55px'}} >
         <ProductConsumer>
           {value => {
             const {cart} = value;

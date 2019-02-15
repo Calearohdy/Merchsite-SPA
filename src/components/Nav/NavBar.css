@@ -1,18 +1,33 @@
 .gradient {
-    background: #005C97;  /* fallback for old browsers */
+    background: rgb(9, 115, 182);  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .link {
-    color: #005C97 !important;
+    color: rgb(9, 115, 182) !important;
 }
 .link:hover {
     text-decoration: none !important;
 }
 .cart {
-    color: rgb(0, 0, 0) !important;
+    font-family: Lobster;
+    color: rgb(9, 115, 182) !important;
 }
 .cart:hover {
     text-decoration: none !important;
 }
+.activeLink {
+    transition: 0.3s ease-in-out
+}
+.activeLink:hover {
+    font-size: 1.2rem;
+    text-shadow: 0px 15px 16px rgba(0,0,0,0.6);
+}
+
+.navProps {
+    box-shadow: -1px 8px 11px -1px rgba(0, 0, 0, 0.233) !important;
+    background: #000000 !important;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000) !important;  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+  }

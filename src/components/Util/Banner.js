@@ -59,7 +59,7 @@ export default class Banner extends Component {
 
     render() {
         return (
-            <section className="jumbotron text-center mainBackground">
+            <section className="jumbotron text-center mainBackground bannerProps">
                 {this.handleSubBanner()}
             </section>
         )

@@ -5,7 +5,7 @@ export default class GitTracker extends Component {
     // ** TODO - integrate API to update
     render() {
         return (
-        <Card raised>
+        <Card className="card" >
             <Card.Content>
             <Card.Header>
                  <i className="fab fa-github" ></i> GitHub Activity

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './NavBar.css';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import { Icon, Menu } from 'semantic-ui-react'
 export default class NavBar extends Component {
 
@@ -10,17 +10,16 @@ export default class NavBar extends Component {
 
   state = { activeItem: 'home' }
 
-  handleItemClick = (e) => {
-    // console.log(e.view)
+  handleItemClick = node => {
+    console.log(node.metaKeys)
   }
 
   render() {
     const { activeItem } = this.state
     return (
-      <div>
-      <Menu pointing size="huge" stackable>
+      <div >
+      <Menu size="huge" secondary className="ui top fixed inverted navProps">
           <Menu.Item 
-            active={activeItem === 'home'} 
             onClick={this.handleItemClick}
             href="/"
             >
@@ -32,25 +31,25 @@ export default class NavBar extends Component {
             </div>
           </Menu.Item>
           <Menu.Item active={activeItem === 'blog'} name='blog' >
-            <Link to="/blog" className="link">
-            <div onClick={(e) => this.handleItemClick(e)} name="blog" >
+            <NavLink to="/blog" className="link" activeClassName="activeLink" >
+            <div onClick={e => this.handleItemClick(e)} name="blog" >
               Blog
               </div> 
-            </Link>
+            </NavLink>
           </Menu.Item>
           <Menu.Item active={activeItem === 'products'}>
-            <Link to="/products" className="link">
-            <div onClick={(e) => this.handleItemClick(e)} >
+            <NavLink to="/products" className="link" activeClassName="activeLink">
+            <div onClick={e => this.handleItemClick(e)} >
             Products
             </div>
-            </Link>
+            </NavLink>
           </Menu.Item>
           <Menu.Menu className='right'>
           <Menu.Item active={activeItem === 'cart'}>
-          <Link to="/cart" className="cart">
+          <NavLink to="/cart" className="cart" activeClassName="activeLink">
             <Icon name='shopping cart' />
             Cart
-            </Link>
+            </NavLink>
           </Menu.Item>
           </Menu.Menu>
         </Menu>

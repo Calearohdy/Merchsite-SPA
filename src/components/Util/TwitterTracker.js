@@ -4,7 +4,7 @@ import image from '../../assets/head.png'
 export default class TwitterTracker extends Component {
   render() {
     return (
-    <Card raised>
+    <Card className="card">
         <Card.Content>
         <Card.Header>
             <i className="fab fa-twitter" ></i> Twitter Activity

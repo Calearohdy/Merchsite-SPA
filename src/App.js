@@ -16,7 +16,7 @@ class App extends Component {
       <React.Fragment>
         <NavBar store={this.props.store} />
         <Switch>
-        <Route 
+          <Route 
               exact path="/" 
               component={Main}/>
           <Route 
@@ -28,7 +28,7 @@ class App extends Component {
           <Route 
               path="/cart" 
               component={Cart}/>
-              <Route 
+          <Route 
               path="/blog" 
               component={ComingSoon}/>              
           <Route 
