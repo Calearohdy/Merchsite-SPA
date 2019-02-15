@@ -30,7 +30,7 @@ export default class NavBar extends Component {
               Merch
             </div>
           </Menu.Item>
-          <Menu.Item active={activeItem === 'blog'} name='blog' >
+          {/* <Menu.Item active={activeItem === 'blog'} name='blog' >
             <NavLink to="/blog" className="link" activeClassName="activeLink" >
             <div onClick={e => this.handleItemClick(e)} name="blog" >
               Blog
@@ -51,7 +51,7 @@ export default class NavBar extends Component {
             Cart
             </NavLink>
           </Menu.Item>
-          </Menu.Menu>
+          </Menu.Menu> */}
         </Menu>
       </div>
     )

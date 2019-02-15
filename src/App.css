@@ -47,7 +47,7 @@ body {
   background: #005C97;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
-  padding: 205px
+  padding: 150px
 }
 
 .popOut {
@@ -55,7 +55,7 @@ body {
 }
 
 .bannerProps {
-  padding: 200px !important;
+  padding: 150px !important;
 }
 
 .card {
@@ -64,5 +64,10 @@ body {
 }
 .card:hover, .card:active {
   box-shadow: -1px 8px 11px -1px rgba(0,0,0,0.13);    
+  bottom: 3px !important;
+}
+
+.bannerCard {
+  box-shadow: -1px 8px 11px -1px rgba(0,0,0,0.13) !important;    
   bottom: 3px !important;
 }

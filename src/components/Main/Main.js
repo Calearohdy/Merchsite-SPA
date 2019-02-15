@@ -5,49 +5,16 @@ import Footer from '../Util/Footer';
 import GitTracker from '../Util/GitTracker';
 import LinkedInTracker from '../Util/LinkedInTracker';
 import TwitterTracker from '../Util/TwitterTracker';
-import { Grid, Image, Progress, List } from 'semantic-ui-react'
-import image from '../../assets/img3.png';
+import MainCard from './MainCard';
+import { Progress } from 'semantic-ui-react'
+
 
 export default class Main extends Component {
   render() {
     return (
       <div>
       <div className="pusher mainBackground">
-        <div className="ui raised very padded text container segment">
-        <Grid>
-            <Grid.Column width={7}>
-            <Image src={image} className="rotateImg" size="massive" />
-            </Grid.Column>
-            <Grid.Column width={9}>
-            <div className="ui header">Hello Everybody, I am<br/> <h1> Caleb Rohdy </h1> </div>
-              <div>
-              Experienced Junior Developer with a demonstrated history of working with educational-student level data. 
-              Skilled in SQL, JavaScript (React/Redux), QlikSense. </div>
-              <List>
-                <List.Item>
-                  <List.Icon name='users' />
-                  <List.Content>Eidex Insights</List.Content>
-                </List.Item>
-                <List.Item>
-                  <List.Icon name='marker' />
-                  <List.Content>Grand Rapids, MI</List.Content>
-                </List.Item>
-                <List.Item>
-                  <List.Icon name='mail' />
-                  <List.Content>
-                    <a href='mailto:rohdy.cale@gmail.com'>Rohdy.Cale@gmail.com</a>
-                  </List.Content>
-                </List.Item>
-                <List.Item>
-                  <List.Icon name='linkify' />
-                  <List.Content>
-                    <a href='https://www.linkedin.com/in/cale-rohdy-developer/'>LinkedIn</a>
-                  </List.Content>
-                </List.Item>
-              </List>
-            </Grid.Column>
-        </Grid>
-        </div>
+        <MainCard />
       </div>
       <Title name="My" title="Skills" />
         <div className="ui vertical px-5">
