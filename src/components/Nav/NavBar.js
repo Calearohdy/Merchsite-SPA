@@ -1,59 +1,60 @@
 import React, { Component } from 'react'
 import './NavBar.css';
 import {NavLink} from 'react-router-dom';
-import { Icon, Menu } from 'semantic-ui-react'
+import { Menu, Transition } from 'semantic-ui-react'
 export default class NavBar extends Component {
 
   // TODO: fix issue with OnClick Navbar function - should show 
   // pointers to the specific item 
 
 
-  state = { activeItem: 'home' }
-
-  handleItemClick = node => {
-    console.log(node.metaKeys)
-  }
+  state = { activeItem: 'home', visible: true }
 
   render() {
-    const { activeItem } = this.state
+    const { activeItem, visible } = this.state
     return (
-      <div >
-      <Menu size="huge" secondary className="ui top fixed inverted navProps">
-          <Menu.Item 
-            onClick={this.handleItemClick}
-            href="/"
-            >
+      <Transition 
+        animation="fly right" 
+        duration={1200} 
+        visible={visible} 
+        transitionOnMount={true} >
+      <div >     
+      <Menu vertical size="huge" className="ui compact navProps navTop navHide" >
+          <Menu.Item>
+            <NavLink to="/" className="link" activeClassName="activeLink">
             <div style={{fontFamily: 'Rock Salt', marginRight: '3px', fontSize: '20px'}} >
               CR
             </div>
             <div className="navPop" >
               Merch
             </div>
+            </NavLink>
           </Menu.Item>
-          {/* <Menu.Item active={activeItem === 'blog'} name='blog' >
+          <Menu.Item active={activeItem === 'blog'} name='blog' >
             <NavLink to="/blog" className="link" activeClassName="activeLink" >
-            <div onClick={e => this.handleItemClick(e)} name="blog" >
+            <div name="blog" className="navPopLink">
               Blog
               </div> 
             </NavLink>
           </Menu.Item>
           <Menu.Item active={activeItem === 'products'}>
             <NavLink to="/products" className="link" activeClassName="activeLink">
-            <div onClick={e => this.handleItemClick(e)} >
+            <div className="navPopLink">
             Products
             </div>
             </NavLink>
           </Menu.Item>
-          <Menu.Menu className='right'>
+          {/* <Menu.Menu className='right'>
           <Menu.Item active={activeItem === 'cart'}>
           <NavLink to="/cart" className="cart" activeClassName="activeLink">
-            <Icon name='shopping cart' />
+            <Icon name='shopping cart' className="navPop"/>
             Cart
             </NavLink>
           </Menu.Item>
           </Menu.Menu> */}
         </Menu>
       </div>
+      </Transition>
     )
   }
 }

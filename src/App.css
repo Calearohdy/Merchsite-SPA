@@ -44,10 +44,15 @@ body {
 }
 
 .mainBackground {
-  background: #005C97;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #313386, rgb(0, 106, 172)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
-  padding: 150px
+  padding-top: 50px;
+  background: linear-gradient(132deg, #182b7e, #066d5c);
+  background-size: 400% 400%;
+  animation: BackgroundGradient 30s ease infinite;
+}
+@keyframes BackgroundGradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
 }
 
 .popOut {
@@ -56,6 +61,7 @@ body {
   background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -75,4 +81,15 @@ body {
 .bannerCard {
   box-shadow: -1px 8px 20px 3px rgba(0, 0, 0, 0.13) !important;    
   bottom: 3px !important;
+  background: #f3f3f3 !important;
+  margin-top: 25px !important;
+}
+.navTop {
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: auto;
+  position: fixed;
+  z-index: 101;
+  margin: 0;
 }

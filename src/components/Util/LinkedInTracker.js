@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { Card, Feed } from 'semantic-ui-react';
-import image from '../../assets/head.png'
+import { Card, Feed, Transition } from 'semantic-ui-react';
 export default class LinkedInTracker extends Component {
     // ** TODO - integrate API to update
   render() {
     return (
+      <Transition animation="browse" duration={1000} transitionOnMount={true} >        
     <Card className="card">
         <Card.Content>
         <Card.Header>
@@ -14,7 +14,6 @@ export default class LinkedInTracker extends Component {
         <Card.Content>
         <Feed>
             <Feed.Event>
-            <Feed.Label image={image}/>
             <Feed.Content>
                 <Feed.Date content='1 day ago' />
                 <Feed.Summary>
@@ -24,7 +23,6 @@ export default class LinkedInTracker extends Component {
             </Feed.Event>
 
             <Feed.Event>
-            <Feed.Label image={image}/>
             <Feed.Content>
                 <Feed.Date content='3 days ago' />
                 <Feed.Summary>
@@ -34,7 +32,6 @@ export default class LinkedInTracker extends Component {
             </Feed.Event>
 
             <Feed.Event>
-            <Feed.Label image={image} />
             <Feed.Content>
                 <Feed.Date content='4 days ago' />
                 <Feed.Summary>
@@ -45,6 +42,7 @@ export default class LinkedInTracker extends Component {
         </Feed>
         </Card.Content>
     </Card>
+    </Transition>
     )
   }
 }

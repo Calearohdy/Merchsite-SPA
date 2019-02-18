@@ -12,6 +12,7 @@
 }
 .cart {
     font-family: Lobster;
+    font-size: 15px;
     color: rgb(9, 115, 182) !important;
 }
 .cart:hover {
@@ -25,11 +26,20 @@
     text-shadow: 0px 15px 16px rgba(0,0,0,0.6);
 }
 
+.navHide {
+    width: 100% !important;
+}
+.navHide:hover {
+    width: 0% !important;
+}
+
 .navProps {
+    border-radius: 5px !important;
     box-shadow: -1px 8px 11px -1px rgba(0, 0, 0, 0.233) !important;
-    background: #000000 !important;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #434343, #000000) !important;  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #434343, #000000) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    background: #f3f3f3 !important;
+    /* background: #000000 !important; 
+    background: -webkit-linear-gradient(to right, #434343, #000000) !important; 
+    background: linear-gradient(to right, #434343, #000000) !important;  */
 }
 
 .navPop {
@@ -39,5 +49,16 @@
     background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
     -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.navPopLink {
+    font-family: Lobster;
+    font-size: 20px;
+    background: #000428;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    -webkit-background-clip: text;
+    background-clip: text;    
     -webkit-text-fill-color: transparent;
 }
